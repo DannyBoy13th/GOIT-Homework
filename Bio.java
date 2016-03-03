@@ -3,16 +3,17 @@ public class Bio {
         String Name = "Name: Daniel Solo";
         int Age = 23;
         String Age1 = "Age: ";
-		String Sex = "Sex: Male";
+	String Sex = "Sex: Male";
         String City = "City: Kiev";
-		String Occupation = "Occupation: Head Analyst";
-		String Hobbies = "Hobbies: videogames, books, movies and comics";		
+	String Occupation = "Occupation: Head Analyst";
+	String Hobbies = "Hobbies: videogames, books, movies and comics";		
+        // Конец введения данных
         System.out.println(Name);
         System.out.print(Age1);
         System.out.println(Age);
-		System.out.println(Sex);
+	System.out.println(Sex);
         System.out.println(City);
-		System.out.println(Occupation);
-		System.out.println(Hobbies);
+	System.out.println(Occupation);
+	System.out.println(Hobbies);
     }
 }
