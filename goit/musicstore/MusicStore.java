@@ -15,4 +15,15 @@ public class MusicStore {
     public void setMusicInstruments(List<MusicInstrument> musicInstruments) {
         MusicInstruments = musicInstruments;
     }
+
+    public static void main (String [] args) {
+        String Inventory = "Inventory:";
+        String Guitar = "Rocker 2016";
+        String Piano = "Mozart 1669";
+        String Trumpet = "Golden Horn";
+        System.out.println(Inventory);
+        System.out.println(Guitar);
+        System.out.println(Piano);
+        System.out.println(Trumpet);
+    }
 }

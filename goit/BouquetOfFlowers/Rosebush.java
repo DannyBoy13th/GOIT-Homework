@@ -15,4 +15,9 @@ public class Rosebush {
     public void setRoses(List<Rose> roses) {
         Roses = roses;
     }
+
+    public static void main (String [] args) {
+        System.out.println("A beautiful bush, covered in many red roses.");
+    }
 }
+
