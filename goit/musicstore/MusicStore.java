@@ -1,29 +1,35 @@
 package com.goit.musicstore;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by Daniel Solo on 06.03.2016.
  */
 public class MusicStore {
-    private List<MusicInstrument> MusicInstruments;
+    public String Inventory="You`re browsing inventory of JAMZ HARD ROCK STORE:";
+    public String Rocker="Wide variety of acustic and electro guitars for any kind of freak";
+    public String Mozart="If you have shitloads of money and prefer to listen to boring music we have a wide range of pianos";
+    public String Horn="Trumpets for anyone who is still interested ins this kind of music";
 
-    public List<MusicInstrument> getMusicInstruments() {
-        return MusicInstruments;
+    private List Store = Arrays.asList(Rocker, Mozart, Horn);
+
+    public String getContent() {
+        return Inventory;
     }
 
-    public void setMusicInstruments(List<MusicInstrument> musicInstruments) {
-        MusicInstruments = musicInstruments;
+    public void setContent(String content) {
+        Inventory = content;
     }
 
-    public static void main (String [] args) {
-        String Inventory = "Inventory:";
-        String Guitar = "Rocker 2016";
-        String Piano = "Mozart 1669";
-        String Trumpet = "Golden Horn";
+    Iterator itr=Store.iterator();
+
+    public void Inventory(){
         System.out.println(Inventory);
-        System.out.println(Guitar);
-        System.out.println(Piano);
-        System.out.println(Trumpet);
+        while(itr.hasNext())
+
+            System.out.println(itr.next());
+
     }
 }

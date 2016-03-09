@@ -1,5 +1,8 @@
 package com.goit.filedepository;
 
+
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -7,25 +10,30 @@ import java.util.List;
  */
 public class FileDepository {
 
-    private List<File> Files;
+    public String Content="Displaying RAR Content:";
+    public String Txt="AboutMe.doc";
+    public String Jpg="Yaremche.jpg";
+    public String Mp3="SpanishSahara.mp3";
 
-    public List<File> getFiles() {
-        return Files;
+    private List Files = Arrays.asList(Txt, Jpg, Mp3);
+
+    public String getContent() {
+        return Content;
     }
 
-    public void setFiles(List<File> files) {
-        Files = files;
+    public void setContent(String content) {
+        Content = content;
     }
 
-    public static void main (String [] args) {
-        String Content = "Content:";
-        String Jpg = "Yaremche.jpg";
-        String Mp3 = "Spanish Sahara.mp3";
-        String Doc = "About Me.doc";
+    Iterator itr=Files.iterator();
+
+    public void Content(){
         System.out.println(Content);
-        System.out.println(Jpg);
-        System.out.println(Mp3);
-        System.out.println(Doc);
+        while(itr.hasNext())
+
+            System.out.println(itr.next());
+
     }
+
 
 }

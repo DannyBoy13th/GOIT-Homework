@@ -1,23 +1,28 @@
 package com.goit.BouquetOfFlowers;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by Daniel Solo on 06.03.2016.
  */
 public class Rosebush {
-   private List<Rose> Roses;
+    public String Bush="Green Bush covered in many wild roses";
+    public String Ros="Approximately 43 roses can be found on this bush";
 
-    public List<Rose> getRoses() {
-        return Roses;
-    }
+   private List Roses = Arrays.asList(Ros);
 
-    public void setRoses(List<Rose> roses) {
-        Roses = roses;
-    }
 
-    public static void main (String [] args) {
-        System.out.println("A beautiful bush, covered in many red roses.");
+
+    Iterator itr=Roses.iterator();
+
+    public void Bush(){
+        System.out.println(Bush);
+        while(itr.hasNext())
+
+            System.out.println(itr.next());
+
     }
 }
 
