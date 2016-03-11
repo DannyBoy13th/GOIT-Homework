@@ -7,76 +7,69 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner ShapeScanner = new Scanner(System.in);
-        double h=14;
-        double c=7;
-        double a=5;
-        double b=8;
-        double r=6;
-        double pi = 3.1416;
-        double result;
-        double result2;
-        double result3;
 
+        Scanner ShapeScanner = new Scanner(System.in);
+        Scanner TriangleMeter = new Scanner(System.in);
+        Scanner CircleMeter = new Scanner(System.in);
+        Scanner RectangleMeter = new Scanner(System.in);
+
+        double H;
+        double C;
+        double A;
+        double B;
+        double R;
+        double Pi = 3.1412;
 
         System.out.println("Space Counter");
         System.out.println();
         System.out.println("Please enter a shape which you would like to count (Triangle, Circle or Rectangle): ");
 
-        if (ShapeScanner.hasNext()) {
+        if (ShapeScanner.hasNext("Triangle")){
 
-            if (ShapeScanner.hasNext("Triangle")) {
+            System.out.println("Please, print in the Height of triangle");
 
-                System.out.println("Please, print in the Height");
-                if (ShapeScanner.hasNextDouble()) {
-                    h = ShapeScanner.nextDouble();
-                    System.out.println("Height is: " + h);
-                }
+            if (TriangleMeter.hasNextDouble()) {
+                H = TriangleMeter.nextDouble();
 
-                System.out.println("Please, print in Side C");
-                if (ShapeScanner.hasNextDouble()) {
-                    c = ShapeScanner.nextDouble();
-                    System.out.println("Side c is: " + c);
-                }
+                System.out.println();
+                System.out.println("Please, print in Side C of the triangle");
+                C = TriangleMeter.nextDouble();
 
-                result = h * c / 2;
-                System.out.println("Result is: " + result);
+                System.out.println();
+                System.out.println("Result is: " + H * C / 2);
 
             }
-
-
-            if (ShapeScanner.hasNext("Circle")) {
-
-                System.out.println("Please, print in the Radius of the Circle");
-                if (ShapeScanner.hasNextDouble()) {
-                    r = ShapeScanner.nextDouble();
-                    System.out.println("Radius is: " + r);
-                    }
-
-                    result2 = r * r / pi;
-                    System.out.println("Result is: " + result2);
-                }
-
-            if (ShapeScanner.hasNext("Rectangle")) {
-                    System.out.println("Please print in Side A");
-
-                if (ShapeScanner.hasNextDouble()) {
-                        a = ShapeScanner.nextDouble();
-                    System.out.println("Side A is: " + a);
-                    }
-
-                    System.out.println("Please print in Side B");
-                if (ShapeScanner.hasNextDouble()) {
-                        b = ShapeScanner.nextDouble();
-                    System.out.println("Side B is: " + b);
-                    }
-
-                result3 = a * b;
-                System.out.println("Result is: " + result3);
-
-                }
             }
+        if (ShapeScanner.hasNext("Circle")){
+            System.out.println("Please, print in radius of the circle");
+
+            if (CircleMeter.hasNextDouble()){
+                R = CircleMeter.nextDouble();
+
+                System.out.println();
+                System.out.println("Result is: " + R * R *Pi);
+            }
+        }
+        if (ShapeScanner.hasNext("Rectangle")){
+            System.out.println("Please, print in Side A of the rectangle");
+
+            if (RectangleMeter.hasNextDouble()){
+                A = RectangleMeter.nextDouble();
+
+                System.out.println();
+                System.out.println("Please, print in Side B of the rectangle");
+                B = RectangleMeter.nextDouble();
+
+                System.out.println();
+                System.out.println("Result is: " + B * A);
+            }
+        }
+        else {
+            System.out.println("Wrong Shape! Start again.");
+        }
 
         }
-    }
+
+        }
+
 
